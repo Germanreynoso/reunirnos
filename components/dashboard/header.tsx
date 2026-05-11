@@ -6,16 +6,20 @@ import { Badge } from "@/components/ui/badge"
 
 export function DashboardHeader() {
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/80 backdrop-blur-md px-4 lg:px-6">
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/80 backdrop-blur-md px-4 sm:px-6">
       {/* Left section */}
-      <div className="flex items-center gap-4 pl-12 lg:pl-0">
-        <div className="hidden sm:block">
-          <h1 className="text-lg font-semibold text-foreground">Plan Estratégico Tucumán 2030</h1>
-          <p className="text-xs text-muted-foreground">Movilidad Sostenible y Desarrollo Urbano</p>
+      <div className="flex items-center gap-3 pl-12 lg:pl-0">
+        <div className="flex flex-col">
+          <h1 className="text-sm sm:text-lg font-bold text-foreground leading-tight truncate max-w-[150px] sm:max-w-none">
+            Tucumán 2030
+          </h1>
+          <p className="text-[10px] sm:text-xs text-muted-foreground hidden xs:block">
+            Smart City Platform
+          </p>
         </div>
-        <Badge className="bg-emerald-500/15 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/20">
-          <Circle className="h-1.5 w-1.5 fill-emerald-400 mr-1.5" />
-          En ejecución
+        <Badge className="bg-emerald-500/15 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/20 px-1.5 py-0 sm:px-2.5 sm:py-0.5">
+          <Circle className="h-1.5 w-1.5 fill-emerald-400 mr-1 sm:mr-1.5" />
+          <span className="text-[10px] sm:text-xs">Vivo</span>
         </Badge>
       </div>
 
@@ -50,7 +54,7 @@ export function DashboardHeader() {
         {/* Profile */}
         <button className="flex items-center gap-3 rounded-lg border border-border bg-muted/50 px-3 py-1.5 transition-colors hover:bg-muted">
           <Avatar className="h-7 w-7">
-            <AvatarImage src="/avatar.png" alt="Consultor" />
+            <AvatarImage src="/placeholder-user.jpg" alt="Consultor" />
             <AvatarFallback className="bg-primary/20 text-primary text-xs">DR</AvatarFallback>
           </Avatar>
           <div className="hidden md:flex flex-col items-start">

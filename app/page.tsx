@@ -22,15 +22,15 @@ export default function Dashboard() {
 
       {/* Main content */}
       <div className={cn(
-        "transition-all duration-300",
-        sidebarCollapsed ? "pl-[72px]" : "pl-[260px]",
-        "max-lg:pl-0"
+        "transition-all duration-300 min-h-screen",
+        sidebarCollapsed ? "lg:pl-[72px]" : "lg:pl-[260px]",
+        "pl-0"
       )}>
         {/* Header */}
         <DashboardHeader />
 
         {/* Dashboard content */}
-        <main className="p-6 space-y-6">
+        <main className="p-4 sm:p-6 space-y-6">
           {/* KPI Cards */}
           <section>
             <div className="flex items-center justify-between mb-4">

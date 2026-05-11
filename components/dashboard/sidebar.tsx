@@ -55,7 +55,7 @@ export function DashboardSidebar({ onCollapse }: DashboardSidebarProps) {
       {/* Mobile menu button */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="fixed left-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card text-foreground lg:hidden"
+        className="fixed left-3 top-[11px] z-50 flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card/80 backdrop-blur-md text-foreground lg:hidden shadow-lg"
       >
         {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
@@ -63,16 +63,16 @@ export function DashboardSidebar({ onCollapse }: DashboardSidebarProps) {
       {/* Mobile overlay */}
       {mobileOpen && (
         <div 
-          className="fixed inset-0 z-30 bg-background/80 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-background/60 backdrop-blur-sm lg:hidden transition-opacity duration-300"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       <aside
         className={cn(
-          "fixed left-0 top-0 z-40 flex h-screen flex-col border-r border-sidebar-border bg-sidebar transition-all duration-300",
+          "fixed left-0 top-0 z-50 flex h-screen flex-col border-r border-sidebar-border bg-sidebar transition-all duration-300 ease-in-out",
           collapsed ? "w-[72px]" : "w-[260px]",
-          "max-lg:w-[260px]",
+          "max-lg:w-[280px]",
           mobileOpen ? "max-lg:translate-x-0" : "max-lg:-translate-x-full"
         )}
       >

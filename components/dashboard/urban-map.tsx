@@ -62,17 +62,17 @@ export function UrbanMap() {
       </div>
 
       {/* Map Area */}
-      <div className="relative h-[400px] bg-[#0a1628] overflow-hidden">
+      <div className="relative h-[300px] sm:h-[400px] bg-[#0a1628] overflow-hidden">
         {/* Grid overlay */}
         <div 
           className="absolute inset-0 transition-transform duration-300"
           style={{ transform: `scale(${zoom})` }}
         >
           {/* Background grid pattern */}
-          <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(34, 211, 238, 0.1)" strokeWidth="0.5"/>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(34, 211, 238, 0.1)" strokeWidth="0.1"/>
               </pattern>
               <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stopColor="rgba(16, 185, 129, 0.4)" />
@@ -87,19 +87,19 @@ export function UrbanMap() {
                 <stop offset="100%" stopColor="rgba(245, 158, 11, 0)" />
               </radialGradient>
             </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
+            <rect width="100" height="100" fill="url(#grid)" />
             
             {/* Urban zones - stylized representation */}
-            <ellipse cx="35%" cy="35%" rx="15%" ry="12%" fill="url(#glow1)" opacity="0.6" />
-            <ellipse cx="55%" cy="50%" rx="18%" ry="15%" fill="url(#glow2)" opacity="0.5" />
-            <ellipse cx="25%" cy="65%" rx="12%" ry="10%" fill="url(#glow3)" opacity="0.4" />
-            <ellipse cx="70%" cy="40%" rx="10%" ry="12%" fill="url(#glow1)" opacity="0.7" />
+            <ellipse cx="35" cy="35" rx="15" ry="12" fill="url(#glow1)" opacity="0.6" />
+            <ellipse cx="55" cy="50" rx="18" ry="15" fill="url(#glow2)" opacity="0.5" />
+            <ellipse cx="25" cy="65" rx="12" ry="10" fill="url(#glow3)" opacity="0.4" />
+            <ellipse cx="70" cy="40" rx="10" ry="12" fill="url(#glow1)" opacity="0.7" />
             
             {/* Roads - main arteries */}
-            <path d="M 10% 50% Q 30% 45% 50% 50% T 90% 55%" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="3" fill="none" />
-            <path d="M 50% 10% Q 45% 30% 50% 50% T 55% 90%" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="3" fill="none" />
-            <path d="M 20% 20% Q 40% 35% 60% 45% T 85% 75%" stroke="rgba(16, 185, 129, 0.2)" strokeWidth="2" fill="none" />
-            <path d="M 15% 70% Q 35% 60% 55% 55% T 80% 35%" stroke="rgba(16, 185, 129, 0.2)" strokeWidth="2" fill="none" />
+            <path d="M 10 50 Q 30 45 50 50 T 90 55" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="0.5" fill="none" />
+            <path d="M 50 10 Q 45 30 50 50 T 55 90" stroke="rgba(34, 211, 238, 0.3)" strokeWidth="0.5" fill="none" />
+            <path d="M 20 20 Q 40 35 60 45 T 85 75" stroke="rgba(16, 185, 129, 0.2)" strokeWidth="0.3" fill="none" />
+            <path d="M 15 70 Q 35 60 55 55 T 80 35" stroke="rgba(16, 185, 129, 0.2)" strokeWidth="0.3" fill="none" />
           </svg>
 
           {/* Hotspots */}

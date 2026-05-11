@@ -135,7 +135,7 @@ export function KPICards() {
 
             {/* Value */}
             <div className="mb-1">
-              <span className="text-2xl font-bold text-foreground">{kpi.value}</span>
+              <span className="text-xl sm:text-2xl font-bold text-foreground">{kpi.value}</span>
             </div>
 
             {/* Label */}
